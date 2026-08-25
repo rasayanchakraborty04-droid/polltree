@@ -1,0 +1,39 @@
+navbar {
+    width: 100%;
+    height: fit-content;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.209);
+    position: fixed;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Montserrat", sans-serif;
+
+}
+
+.navbar_head p {
+    font-size: 1.1em;
+}
+
+.navbar_head span {
+    font-family: "Crafty Girls", cursive;
+    color: rgb(149, 107, 255);
+}
+
+.navbar_options {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+
+.navbar_options a {
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.navbar_icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
