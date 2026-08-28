@@ -1,10 +1,19 @@
 package handlers
 
 import (
-	"fmt"
+	"encoding/json"
 	"net/http"
 )
 
-func health(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Server is healthy")
+func Health(w http.ResponseWriter, r *http.Request) {
+	// fmt.Fprintln(w, "Server is healthy")
+
+	response := map[string]string {
+		"status": "ok",
+		"message": "server is healthy",
+	}
+
+	w.Header().Set("Content-type", "application/json")
+
+	json.NewEncoder(w).Encode(response)
 }
