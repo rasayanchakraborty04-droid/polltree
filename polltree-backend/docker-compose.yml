@@ -1,0 +1,10 @@
+services:
+
+  polltree-db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: polltree
+      POSTGRES_USER: polltree
+      POSTGRES_PASSWORD: polltree
+    ports:
+      - "5432:5432"

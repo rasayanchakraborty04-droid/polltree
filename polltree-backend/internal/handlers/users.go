@@ -1,13 +1,11 @@
 package handlers
 
 import (
-	"encoding/json"
-	"net/http"
-
+	"github.com/gin-gonic/gin"
 	"github.com/rasayanchakraborty04-droid/polltree/polltree-backend/internal/models"
 )
 
-func GetUsers(w http.ResponseWriter, r *http.Request) {
+func GetUsers(c *gin.Context) {
 
 	users := []models.User{
 		{
@@ -22,7 +20,13 @@ func GetUsers(w http.ResponseWriter, r *http.Request) {
 		},
 	}
 
-	w.Header().Set("Cntent-Type", "application/json")
+	// userss, err := userServices.GetAllUsers()
 
-	json.NewEncoder(w).Encode(users)
+	// if err != nil {
+	// 	c.JSON(500, g.H{
+	// 		"error": "failed to fetch error",
+	// 	})
+	// }
+
+	c.JSON(200, users)
 }

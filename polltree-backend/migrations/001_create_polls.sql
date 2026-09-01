@@ -1,0 +1,11 @@
+CREATE TABLE polls (
+    id SERIAL PRIMARY KEY,
+    question TEXT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+
+CREATE TABLE options (
+    id SERIAL PRIMARY KEY,
+    poll_id INTEGER NOT NULL REFERENCES polls(id) ON DELETE CASCADE,
+    text TEXT NOT NULL
+);
